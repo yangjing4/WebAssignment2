@@ -1,0 +1,105 @@
+$width-name: max-width;
+$target-width: 650px;
+
+@media screen and ($width-name : $target-width) {
+  @mixin delete{
+    display: none;
+  }
+  
+  #delete1{
+    @include delete;
+  }
+  
+  
+  @mixin blk{
+    display: block;
+  }
+  
+  
+  .label1{
+    @include blk;
+  }
+  
+  div{
+    .page2{
+      div{
+        div{
+          clear:both;
+          display:block;
+          padding-top:0;
+        }
+      }
+    }
+  }
+  
+  @mixin qq{
+    text-align: left;
+    margin-left:5%;
+    width:auto;
+  }
+  
+  .p2h1{
+    @include qq;
+  }
+  
+  .p2p1{
+    @include qq;
+  }
+  
+  .p2pr{
+    width: auto;
+  }
+  
+  div{
+    .p2pl{
+      @extend .p2pr;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+  
+  #delete2{
+    @include delete;
+  }
+  
+  button{
+    position:relative;
+    left:5%;
+  }
+  
+  div{
+    .page3{
+      a{
+        @extend .p2pr;
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+  }
+  
+  .p3b1{
+    @include blk;
+  }
+  
+  .p3b2{
+    @include delete;
+  }
+  
+  .p3b3{
+    @include delete;
+  }
+  
+  .p4d1{
+    @extend .p2pr;
+    margin-right: auto;
+    margin-left: 10%;
+    display:inline-block;
+  }
+  
+  .p4d2{
+    @include delete;
+  }
+  
+
+  
+}
